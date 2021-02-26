@@ -43,5 +43,5 @@ This is a CyberDefender workshop help by UOW on the 1st of April 2021 09:00 am.
     ```
 2. Remove the NatNetwork
     ```
-    vboxmanage natnetwork add --netname NatNetwork --network 10.0.2.0/24 --dhcp off
+    vboxmanage natnetwork remove --netname NatNetwork
     ```
