@@ -39,7 +39,7 @@ This is a CyberDefender workshop help by UOW on the 1st of April 2021 09:00 am.
 ## Clear the environment
 1. Execute vagrant down
     ```
-    vagrant down
+    vagrant destroy
     ```
 2. Remove the NatNetwork
     ```
