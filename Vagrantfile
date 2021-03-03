@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "cyberlab_client" do |client|
-    client.vm.box = "ezeutno/cyberlab_client"
+    client.vm.box = "ezeutno/cyberlab_clientbox"
     client.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--natnet1", "192.168.0.0/24"]
       v.customize ["modifyvm", :id, "--nic2", "natnetwork", "--nat-network2", "NatNetwork", "--nictype2", "virtio"]
@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "cyberlab_server" do |server|
-    server.vm.box = "ezeutno/cyberlab_server"
+    server.vm.box = "ezeutno/cyberlab_serverbox"
     server.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--natnet1", "192.168.0.0/24"]
       v.customize ["modifyvm", :id, "--nic2", "natnetwork", "--nat-network2", "NatNetwork", "--nictype2", "virtio"]
